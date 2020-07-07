@@ -44,7 +44,16 @@ The basics of working with data.tables are:
 
 `dt[,j, keyby = .(a)]` – group and sort rows by values in specific columns
 
-## 
+## Unique rows
 
+`uniqueN(dt, by = c("a", "b"))` – count the number of unique rows based on columns specified in "by". leave out the "N" to really extract unique rows
+
+## Rename columns
+
+`setnames(dt, c("a", "b"), c("x,"y"))` – rename columns
+
+## Inner join
+
+`dt_a[dt_b, on = .(b = y)] – join data.tables on rows with equal values
 
 Some parts were extracted from a [cheat sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/master/datatable.pdf) by Erik Petrovski ([CC BY SA](https://creativecommons.org/licenses/by-sa/4.0/), www.petrovski.dk)
