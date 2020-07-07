@@ -56,4 +56,6 @@ The basics of working with data.tables are:
 
 `dt_a[dt_b, on = .(b = y)] – join data.tables on rows with equal values
 
-Some parts were extracted from a [cheat sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/master/datatable.pdf) by Erik Petrovski ([CC BY SA](https://creativecommons.org/licenses/by-sa/4.0/), www.petrovski.dk)
+---
+
+Many parts were extracted from a [cheat sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/master/datatable.pdf) by Erik Petrovski ([CC BY SA](https://creativecommons.org/licenses/by-sa/4.0/), www.petrovski.dk)
