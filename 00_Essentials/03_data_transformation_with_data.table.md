@@ -54,7 +54,7 @@ The basics of working with data.tables are:
 
 ## Inner join
 
-`dt_a[dt_b, on = .(b = y)] – join data.tables on rows with equal values
+`dt_a[dt_b, on = .(b = y)]` – join data.tables on rows with equal values
 
 ---
 
