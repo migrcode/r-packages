@@ -8,3 +8,11 @@
 ## Workflow
 
 * [Project oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) — Use self-contained and portable projects; create paths relative to the top-level directory; use R-Studio projects; do not use `rm(list = ls())`; 
+
+## Datasets
+
+* [Kaggle](https://www.kaggle.com/datasets) — Large collection of datasets.
+
+## Cheat Sheets
+
+* [Data Science Cheat Sheets](https://www.kaggle.com/timoboz/data-science-cheat-sheets) — Large collection of cheat sheets and other useful materials.
