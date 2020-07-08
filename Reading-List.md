@@ -16,3 +16,7 @@
 ## Cheat Sheets
 
 * [Data Science Cheat Sheets](https://www.kaggle.com/timoboz/data-science-cheat-sheets) — Large collection of cheat sheets and other useful materials.
+
+## Data Science
+
+* [The Art of Data Science](https://raw.githubusercontent.com/rdpeng/artofdatascience/master/preview/artofdatascience-preview.pdf) — Book
