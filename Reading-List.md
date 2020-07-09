@@ -9,6 +9,10 @@
 
 * [Project oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) — Use self-contained and portable projects; create paths relative to the top-level directory; use R-Studio projects; do not use `rm(list = ls())`; 
 
+## Forecasting
+
+* [Prophet package](https://facebook.github.io/prophet/docs/quick_start.html#r-api) — released by facebook's Core Data Scientist Team
+
 ## Datasets
 
 * [Kaggle](https://www.kaggle.com/datasets) — Large collection of datasets.
