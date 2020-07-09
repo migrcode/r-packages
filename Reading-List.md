@@ -13,6 +13,10 @@
 
 * [Kaggle](https://www.kaggle.com/datasets) — Large collection of datasets.
 
+## DataViz
+
+* [Video: Make beautiful graphs in R](https://www.youtube.com/watch?v=qnw1xDnt_Ec&feature=youtu.be)
+
 ## Cheat Sheets
 
 * [Data Science Cheat Sheets](https://www.kaggle.com/timoboz/data-science-cheat-sheets) — Large collection of cheat sheets and other useful materials.
@@ -20,3 +24,4 @@
 ## Data Science
 
 * [The Art of Data Science](https://raw.githubusercontent.com/rdpeng/artofdatascience/master/preview/artofdatascience-preview.pdf) — Book
+* [Regression and Other Stories](https://avehtari.github.io/ROS-Examples/) — Book by Andrew Gelman, Jennifer Hill, Aki Vehtari. Code is available [here](https://avehtari.github.io/ROS-Examples/).
