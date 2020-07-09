@@ -7,7 +7,8 @@
 
 ## Workflow
 
-* [Project oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) — Use self-contained and portable projects; create paths relative to the top-level directory; use R-Studio projects; do not use `rm(list = ls())`; 
+* [Project oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) — Use self-contained and portable projects; create paths relative to the top-level directory; use R-Studio projects; do not use `rm(list = ls())`;
+* [What they don't teach you about R](https://rstats.wtf/)
 
 ## Forecasting
 
