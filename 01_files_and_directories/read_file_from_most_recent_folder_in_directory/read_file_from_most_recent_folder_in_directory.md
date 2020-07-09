@@ -14,7 +14,7 @@ library(lubridate)
 library(stringr)
 library(data.table)
 
-path <- file.path("C:/Users/mgrie/Desktop/2020") # Set path to directory
+path <- file.path("PATH") # Set path to directory
 dirs <- file.info(list.files(path, pattern = "^20(.*)$", full.names = TRUE)) # List files within directory
 
 dir.curr <- rownames(dirs)[which.max(dirs$ctime)] # Use most recent file based on creation time
