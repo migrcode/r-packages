@@ -50,7 +50,7 @@ The basics of working with data.tables are:
 
 ## Rename columns
 
-`setnames(dt, c("a", "b"), c("x,"y"))` – rename columns
+`setnames(dt, c("a", "b"), c("x","y"))` – rename columns
 
 ## Inner join
 
