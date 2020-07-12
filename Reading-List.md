@@ -11,6 +11,7 @@
 * [What they don't teach you about R](https://rstats.wtf/)
 * [Debugging with RStudio](https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio)
 * [R Diagnostics](https://support.rstudio.com/hc/en-us/articles/205753617-Code-Diagnostics)
+* [Measuring function execution time in R](https://stackoverflow.com/questions/6262203/measuring-function-execution-time-in-r)
 
 ## Forecasting
 
@@ -23,10 +24,20 @@
 ## DataViz
 
 * [Video: Make beautiful graphs in R](https://www.youtube.com/watch?v=qnw1xDnt_Ec&feature=youtu.be)
+* [Awesome ggplot2 packages](https://github.com/erikgahner/awesome-ggplot2)
 
 ## Cheat Sheets
 
 * [Data Science Cheat Sheets](https://www.kaggle.com/timoboz/data-science-cheat-sheets) — Large collection of cheat sheets and other useful materials.
+
+## RStudio Themes
+
+* [Mojave Dark Theme](https://github.com/patrickshox/Mojave-Dark-RStudio-Theme/blob/master/Demo%20Images%20and%20Gifs/Main.png)
+* [Visual Studio Theme](https://github.com/michaelasher/CustomRStudioTheme)
+
+## Random tips
+
+* `Ctrl + Shift + M` types the `%>%` operator.
 
 ## Data Science
 
