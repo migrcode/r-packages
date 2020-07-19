@@ -38,6 +38,7 @@
 ## Font
 
 * [FiraCode](https://github.com/tonsky/FiraCode) — best font for programming
+* [FiraCodeiScript](https://github.com/kencrocken/FiraCodeiScript) — even better, italics for some parts
 
 ## Random tips
 
