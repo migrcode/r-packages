@@ -35,6 +35,10 @@
 * [Mojave Dark Theme](https://github.com/patrickshox/Mojave-Dark-RStudio-Theme/blob/master/Demo%20Images%20and%20Gifs/Main.png)
 * [Visual Studio Theme](https://github.com/michaelasher/CustomRStudioTheme)
 
+## Font
+
+* [FiraCode](https://github.com/tonsky/FiraCode) — best font for programming
+
 ## Random tips
 
 * `Ctrl + Shift + M` types the `%>%` operator.
