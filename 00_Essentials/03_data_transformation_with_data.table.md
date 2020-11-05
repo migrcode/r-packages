@@ -58,7 +58,7 @@ The basics of working with data.tables are:
 
 ## Manipulate columns
 
-`dt <- data.table(mtcars)[, `:=` (v1 = disp/cyl, v2 = hp/drat)]` - create two new variables based on existing variables
+```dt <- data.table(mtcars)[, `:=` (v1 = disp/cyl, v2 = hp/drat)]```
 
 ---
 
