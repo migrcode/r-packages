@@ -56,6 +56,10 @@ The basics of working with data.tables are:
 
 `dt_a[dt_b, on = .(b = y)]` – join data.tables on rows with equal values
 
+## Manipulate columns
+
+`dt <- data.table(mtcars)[, `:=` (v1 = disp/cyl, v2 = hp/drat)]` - create two new variables based on existing variables
+
 ---
 
 Many parts were extracted from a [cheat sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/master/datatable.pdf) by Erik Petrovski ([CC BY SA](https://creativecommons.org/licenses/by-sa/4.0/), www.petrovski.dk)
