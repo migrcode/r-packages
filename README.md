@@ -1,1 +1,3 @@
-# r-coding
+# r
+
+see the wiki
