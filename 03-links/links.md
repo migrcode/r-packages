@@ -44,3 +44,4 @@
 
 * [The Art of Data Science](https://raw.githubusercontent.com/rdpeng/artofdatascience/master/preview/artofdatascience-preview.pdf) — Book
 * [Regression and Other Stories](https://avehtari.github.io/ROS-Examples/) — Book by Andrew Gelman, Jennifer Hill, Aki Vehtari. Code is available [here](https://avehtari.github.io/ROS-Examples/).
+* [Working with big data in R](https://waterdata.usgs.gov/blog/formats/)
