@@ -153,3 +153,22 @@ The following goes into a test.Rhtml file:
 </body>
 </html>
 ```
+
+You can knitr this file with the following code in an .Rmarkdown file:
+
+```
+---
+title: "Tile Info Test"
+author: "Allen OBrien"
+date: "6/11/2020"
+output:
+  html_document:
+    theme: flatly
+    highlight: tango
+---
+
+
+```{r}
+knitr::knit("test.Rhtml")
+```
+```
