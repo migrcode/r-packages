@@ -154,7 +154,7 @@ The following goes into a test.Rhtml file:
 </html>
 ```
 
-You can knitr this file with the following code in an .Rmarkdown file:
+You can knitr this file with the following code in an .Rmd file:
 
 ```
 ---
@@ -171,4 +171,5 @@ output:
 ```{r}
 knitr::knit("test.Rhtml")
 ```
+
 ```
