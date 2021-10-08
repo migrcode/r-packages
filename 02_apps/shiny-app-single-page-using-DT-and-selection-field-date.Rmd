@@ -1,0 +1,83 @@
+---
+title: ""
+author: ""
+runtime: shiny
+output: html_document
+---
+
+<style type="text/css">
+.main-container {
+  max-width: 1600px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+library(htmltools)
+library(shiny)
+library(DT)
+library(data.table)
+
+data <- data.table(human=c("Marc", "Susan", "Elle"), 
+                   birthday=c("1990-01-02", "1982-03-04", "1965-12-10"), 
+                   gender=c("m", "w", "d"))
+
+data$birthday <- as.Date(data$birthday)
+
+# PART 2: UI -----------------------------------------------------------
+# Building the page layout
+ui <- fluidPage(
+  navbarPage("Diagnostics"),
+  
+  sidebarPanel(
+    
+    dateInput('date',
+      label = 'Birthday (yyyy-mm-dd)',
+      value = Sys.Date()),
+    
+  ),
+    
+   mainPanel(
+      tabsetPanel(
+        id = 'dataset',
+        tabPanel("analysis-dataset", DT::dataTableOutput("mydata"))
+      )),
+  hr()
+)
+
+
+# PART 1: SERVER -----------------------------------------------------------
+server <- function(input, output) {
+
+  output$mydata <- DT::renderDataTable(
+    DT::datatable({data[birthday == input$date]},
+                  filter = list(position = 'top', clear = FALSE),
+                  options = list(
+                    search = list(regex = TRUE, caseInsensitive = TRUE, search = ''),
+                    pageLength = 200,
+                    #scrollY = '3000px',
+                    scroller = FALSE,
+                    keys = TRUE,
+                    dom = 'Bfrtip',
+                    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+                    initComplete = JS(
+                      "function(settings, json) {",
+                      "$(this.api().table().header()).css({'background-color': '#aaa', 'color': '#000'});",
+                      "}"
+                    )
+                  ),
+                  extensions = list('Scroller' = NULL, 
+                    'KeyTable' = NULL,
+                    'Buttons' = NULL),
+                  ),
+  )
+
+}
+
+
+# PART 3: APP -----------------------------------------------------------
+shinyApp(ui = ui, server = server, options = list(height = "2000px"))
+
+```
+
