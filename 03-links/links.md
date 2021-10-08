@@ -21,6 +21,7 @@
 
 * [Video: Make beautiful graphs in R](https://www.youtube.com/watch?v=qnw1xDnt_Ec&feature=youtu.be)
 * [Awesome ggplot2 packages](https://github.com/erikgahner/awesome-ggplot2)
+* [Beautiful Visualization with R/GGPLOT2](https://datavizs21.classes.andrewheiss.com/example/05-example/)
 
 ## Cheat Sheets
 
