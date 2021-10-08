@@ -1,0 +1,75 @@
+---
+title: "The Title of My Shiny App"
+author: "My Name"
+runtime: shiny
+output: html_document
+---
+
+<style type="text/css">
+.main-container {
+  max-width: 1600px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+library(htmltools)
+library(shiny)
+library(DT)
+
+data <- mtcars
+
+# PART 2: UI -----------------------------------------------------------
+# Building the page layout
+ui <- fluidPage(
+  hr(),
+  DT::dataTableOutput("mydata"),
+  hr()
+)
+
+
+# PART 1: SERVER -----------------------------------------------------------
+server <- function(input, output) {
+
+  output$mydata <- DT::renderDataTable(
+    DT::datatable({data},
+                  filter = list(position = 'top', clear = FALSE),
+                  options = list(
+                    search = list(regex = TRUE, caseInsensitive = TRUE, search = ''),
+                    pageLength = 200,
+                    #scrollY = '3000px',
+                    scroller = FALSE,
+                    keys = TRUE,
+                    dom = 'Bfrtip',
+                    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+                    initComplete = JS(
+                      "function(settings, json) {",
+                      "$(this.api().table().header()).css({'background-color': '#aaa', 'color': '#000'});",
+                      "}"
+                    )
+                  ),
+                  extensions = list('Scroller' = NULL, 
+                    'KeyTable' = NULL,
+                    'Buttons' = NULL),
+                  ),
+  )
+
+}
+
+
+
+
+
+
+# PART 3: APP -----------------------------------------------------------
+shinyApp(ui = ui, server = server, options = list(height = "2000px"))
+
+
+
+
+```
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
