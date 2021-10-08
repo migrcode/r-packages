@@ -34,6 +34,7 @@
 ## Useful Packages
 
 * [ShinyFeedback](https://github.com/merlinoa/shinyFeedback) R package for displaying user feedback alongside Shiny inputs
+* [BBC Plots](https://bbc.github.io/rcookbook/)
 
 ## Font
 
