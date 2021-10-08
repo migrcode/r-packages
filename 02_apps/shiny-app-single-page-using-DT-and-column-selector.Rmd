@@ -1,0 +1,76 @@
+---
+title: ""
+author: ""
+runtime: shiny
+output: html_document
+---
+
+<style type="text/css">
+.main-container {
+  max-width: 1600px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+library(htmltools)
+library(shiny)
+library(DT)
+
+data <- mtcars
+
+# PART 2: UI -----------------------------------------------------------
+# Building the page layout
+ui <- fluidPage(
+  navbarPage("Diagnostics"),
+  sidebarPanel(
+    conditionalPanel(
+          'input.dataset === "diamonds"', # the name of the tab!
+          checkboxGroupInput("show_vars", "Columns in data to show:",
+                             names(data), selected = names(data))
+      )
+    ),
+   mainPanel(
+      tabsetPanel(
+        id = 'dataset',
+        tabPanel("diamonds", DT::dataTableOutput("mydata"))
+      )),
+  hr()
+)
+
+
+# PART 1: SERVER -----------------------------------------------------------
+server <- function(input, output) {
+
+  output$mydata <- DT::renderDataTable(
+    DT::datatable({data[, input$show_vars, drop = FALSE]},
+                  filter = list(position = 'top', clear = FALSE),
+                  options = list(
+                    search = list(regex = TRUE, caseInsensitive = TRUE, search = ''),
+                    pageLength = 200,
+                    #scrollY = '3000px',
+                    scroller = FALSE,
+                    keys = TRUE,
+                    dom = 'Bfrtip',
+                    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+                    initComplete = JS(
+                      "function(settings, json) {",
+                      "$(this.api().table().header()).css({'background-color': '#aaa', 'color': '#000'});",
+                      "}"
+                    )
+                  ),
+                  extensions = list('Scroller' = NULL, 
+                    'KeyTable' = NULL,
+                    'Buttons' = NULL),
+                  ),
+  )
+
+}
+
+
+# PART 3: APP -----------------------------------------------------------
+shinyApp(ui = ui, server = server, options = list(height = "2000px"))
+
+```
+
