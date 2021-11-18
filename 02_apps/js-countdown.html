@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+ 
+<script>
+var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"];
+
+var today = new Date();
+var todaysDate = monthNames[today.getMonth()]+' '+today.getDate()+', '+today.getFullYear();
+//document.write(todaysDate);
+
+document.addEventListener('readystatechange', event => {
+    if (event.target.readyState === "complete") {
+        var clockdiv = document.getElementsByClassName("clockdiv");
+      var countDownDate = new Array();
+        for (var i = 0; i < clockdiv.length; i++) {
+            countDownDate[i] = new Array();
+            countDownDate[i]['el'] = clockdiv[i];
+            // countDownDate[i]['time'] = new Date("November 18, 2021 " + clockdiv[i].getAttribute('data-date')).getTime();
+            countDownDate[i]['time'] = new Date(todaysDate + ' ' + clockdiv[i].getAttribute('data-date')).getTime();
+            countDownDate[i]['hours'] = 0;
+            countDownDate[i]['seconds'] = 0;
+            countDownDate[i]['minutes'] = 0;
+        }
+      
+      var countdownfunction = setInterval(function() {
+for (var i = 0; i < countDownDate.length; i++) {
+                var now = new Date().getTime();
+                var distance = countDownDate[i]['time'] - now;
+                 countDownDate[i]['hours'] = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                 countDownDate[i]['minutes'] = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                 countDownDate[i]['seconds'] = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                 if (distance < 0) {
+                    //countDownDate[i]['el'].querySelector('.days').innerHTML = 0;
+                countDownDate[i]['el'].querySelector('.hours').innerHTML = 0;
+                countDownDate[i]['el'].querySelector('.minutes').innerHTML = 0;
+                countDownDate[i]['el'].querySelector('.seconds').innerHTML = 0;
+                 }else{
+//countDownDate[i]['el'].querySelector('.days').innerHTML = countDownDate[i]['days'];
+                countDownDate[i]['el'].querySelector('.hours').innerHTML = countDownDate[i]['hours'];
+                countDownDate[i]['el'].querySelector('.minutes').innerHTML = countDownDate[i]['minutes'];
+                countDownDate[i]['el'].querySelector('.seconds').innerHTML = countDownDate[i]['seconds'];
+}
+  
+     }
+            }, 1000);
+    }
+});
+</script>
+
+<style type = "text/css">
+body{
+	text-align: center;
+	background: #FFF0D1;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+h1{
+  font-weight: 100;
+  font-size: 40px;
+  margin: 25vh 0px 20px;
+}
+
+h2{
+  font-weight: 100;
+  font-size: 35px;
+}
+
+.clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+  display:block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 20px;
+    // margin-bottom: 15px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clockdiv > div{
+	padding: 5px;
+	border-radius: 3px;
+	background: #00BF96;
+    margin: 5px;
+    // width: 90px;
+}
+
+.clockdiv div > span{
+	padding: 15px;
+    font-size: 18px;
+	border-radius: 3px;
+	background: #00816A;
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+}
+
+.smalltext {
+	margin-top: 10px;
+	font-size: 13px;
+}
+
+.float-container {
+    border: 0px solid #fff;
+    padding: 20px;
+}
+
+.float-child {
+    width: 16%;
+    float: left;
+    padding: 0px;
+    border: 0px solid red;
+}  
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #EAD4A9;
+  color: #000;
+  text-align: center;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #EAD4A9;
+  color: #000;
+  text-align: center;
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+  <h2>Countdown</h2>
+</div>
+
+
+<div class = "float-container">
+
+  <div class = "float-child">
+    <h1 style = "color:#4477AA !important">Area 1</h1>
+    <div class="clockdiv" data-date="23:14:01">
+      <div style = "background-color:#7CBAF7">
+        <span class="hours" style = "background-color: #4477AA"></span>
+        <span class="minutes" style = "background-color: #4477AA"></span>
+        <span class="seconds" style = "background-color: #4477AA"></span>
+        <div class="smalltext">Group 1</div>
+      </div>
+    </div>
+    <div class="clockdiv" data-date="23:14:01">
+      <div style = "background-color:#7CBAF7">
+        <span class="hours" style = "background-color: #4477AA"></span>
+        <span class="minutes" style = "background-color: #4477AA"></span>
+        <span class="seconds" style = "background-color: #4477AA"></span>
+        <div class="smalltext">Group 1</div>
+      </div>
+    </div>
+  </div>
+
+  <div class = "float-child">
+    <h1 style = "color:#66CCEE !important">Area 2</h1>
+    <div class="clockdiv" data-date="23:14:01">
+      <div style = "background-color: #87E1FF">
+        <span class="hours" style = "background-color: #66CCEE"></span>
+        <span class="minutes" style = "background-color: #66CCEE"></span>
+        <span class="seconds" style = "background-color: #66CCEE"></span>
+        <div class="smalltext">Group 1</div>
+      </div>
+    </div>
+    <div class="clockdiv" data-date="23:14:01">
+      <div style = "background-color: #87E1FF">
+        <span class="hours" style = "background-color: #66CCEE"></span>
+        <span class="minutes" style = "background-color: #66CCEE"></span>
+        <span class="seconds" style = "background-color: #66CCEE"></span>
+        <div class="smalltext">Group 2</div>
+      </div>
+    </div>
+  </div>
+
+  <div class = "float-child">
+    <h1 style = "color:#228833 !important">Area 3</h1>
+    <div class="clockdiv" data-date="23:14:01">
+      <div style = "background-color: #4AD461">
+        <span class="hours" style = "background-color: #228833"></span>
+        <span class="minutes" style = "background-color: #228833"></span>
+        <span class="seconds" style = "background-color: #228833"></span>
+        <div class="smalltext">Group 1</div>
+      </div>
+    </div>
+    <div class="clockdiv" data-date="23:14:01">
+      <div style = "background-color: #4AD461">
+        <span class="hours" style = "background-color: #228833"></span>
+        <span class="minutes" style = "background-color: #228833"></span>
+        <span class="seconds" style = "background-color: #228833"></span>
+        <div class="smalltext">Group 2</div>
+      </div>
+    </div>
+  </div>
+
+  <div class = "float-child">
+    <h1 style = "color:#CCBB44 !important">Area 4</h1>
+    <div class="clockdiv" data-date="23:14:01">
+      <div style = "background-color: #DDCC77">
+        <span class="hours" style = "background-color: #CCBB44"></span>
+        <span class="minutes" style = "background-color: #CCBB44"></span>
+        <span class="seconds" style = "background-color: #CCBB44"></span>
+        <div class="smalltext">Group 1</div>
+      </div>
+    </div>
+    <div class="clockdiv" data-date="23:14:01">
+      <div style = "background-color: #DDCC77">
+        <span class="hours" style = "background-color: #CCBB44"></span>
+        <span class="minutes" style = "background-color: #CCBB44"></span>
+        <span class="seconds" style = "background-color: #CCBB44"></span>
+        <div class="smalltext">Group 2</div>
+      </div>
+    </div>
+  </div>
+
+  <div class = "float-child">
+    <h1 style = "color:#EE6677 !important">Area 5</h1>
+    <div class="clockdiv" data-date="23:14:01">
+      <div style = "background-color: #FF8797">
+        <span class="hours" style = "background-color: #EE6677"></span>
+        <span class="minutes" style = "background-color: #EE6677"></span>
+        <span class="seconds" style = "background-color: #EE6677"></span>
+        <div class="smalltext">Group 1</div>
+      </div>
+    </div>
+    <div class="clockdiv" data-date="23:14:01">
+      <div style = "background-color: #FF8797">
+        <span class="hours" style = "background-color: #EE6677"></span>
+        <span class="minutes" style = "background-color: #EE6677"></span>
+        <span class="seconds" style = "background-color: #EE6677"></span>
+        <div class="smalltext">Group 2</div>
+      </div>
+    </div>
+  </div>
+
+  <div class = "float-child">
+    <h1 style = "color:#AA3377 !important">Area 6</h1>
+    <div class="clockdiv" data-date="23:14:01">
+      <div style = "background-color: #F763B7">
+        <span class="hours" style = "background-color: #AA3377"></span>
+        <span class="minutes" style = "background-color: #AA3377"></span>
+        <span class="seconds" style = "background-color: #AA3377"></span>
+        <div class="smalltext">Group 1</div>
+      </div>
+    </div>
+    <div class="clockdiv" data-date="23:14:01">
+      <div style = "background-color: #F763B7">
+        <span class="hours" style = "background-color: #AA3377"></span>
+        <span class="minutes" style = "background-color: #AA3377"></span>
+        <span class="seconds" style = "background-color: #AA3377"></span>
+        <div class="smalltext">Group 2</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>&copy; 2021 by Developer</p>
+</div>
+
+</body>
+</html>
