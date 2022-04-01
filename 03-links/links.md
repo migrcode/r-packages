@@ -12,6 +12,7 @@
 * [Debugging with RStudio](https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio)
 * [R Diagnostics](https://support.rstudio.com/hc/en-us/articles/205753617-Code-Diagnostics)
 * [Measuring function execution time in R](https://stackoverflow.com/questions/6262203/measuring-function-execution-time-in-r)
+* [How to structure R code](https://github.com/lorenzwalthert/strcode)
 
 ## Datasets
 
