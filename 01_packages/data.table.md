@@ -222,6 +222,13 @@ dt[ ...
        ]
 ```
 
+### Ordering results directly
+
+```
+DT[, sum(v), by=x][order(-V1)]
+```
+
+
 ## Set operations
 
 ```r
