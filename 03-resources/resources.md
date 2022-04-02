@@ -46,7 +46,7 @@
 
 ## Random tips
 
-* `Ctrl + Shift + M` types the `%>%` operator.
+* `Ctrl + Shift + M` types the `%>%` operator used by the dplyr package.
 
 ## Data Science
 
