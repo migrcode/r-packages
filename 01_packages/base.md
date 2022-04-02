@@ -2,7 +2,7 @@
 
 ### Switch is a more compact version of if-else
 
-```
+```R
 x_option <- function(x) {
   switch(x,
     a = "option 1",
