@@ -11,6 +11,8 @@ x_option <- function(x) {
     stop("Invalid `x` value")
   )
 }
+
+x_option("a")
 ```
 by https://adv-r.hadley.nz/control-flow.html
 
