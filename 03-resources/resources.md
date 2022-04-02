@@ -15,6 +15,7 @@
 * [How to structure R code](https://github.com/lorenzwalthert/strcode)
 * [Keep a changelog](https://keepachangelog.com/en/1.0.0/)
 * [Use Code Folding](https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections)
+* [Use local() to locally evaluate expressions](https://adv-r.hadley.nz/evaluation.html)
 
 ## Datasets
 
