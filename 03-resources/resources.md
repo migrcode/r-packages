@@ -16,6 +16,7 @@
 * [Keep a changelog](https://keepachangelog.com/en/1.0.0/)
 * [Use Code Folding](https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections)
 * [Use local() to locally evaluate expressions](https://adv-r.hadley.nz/evaluation.html)
+* [Progress bar in R](https://stackoverflow.com/questions/26919787/r-text-progress-bar-in-for-loop)
 
 ## Datasets
 
