@@ -291,6 +291,7 @@ DT2[, z := 11:15] # only DT2 is affected
 
 (from https://stackoverflow.com/questions/15913417/why-does-data-table-update-namesdt-by-reference-even-if-i-assign-to-another-v)
 
+
 ## Summarize multiple columns efficiently
 
 ```r
@@ -300,6 +301,15 @@ dt[, lapply(.SD, sum, na.rm = TRUE), by = category, .SDcols = c("a", "c", "z")]
 ```
 
 (from https://stackoverflow.com/questions/16513827/summarizing-multiple-columns-with-data-table)
+
+
+## Filter columns by pattern
+
+```r
+dt[ , .SD, .SDcols = patterns('name')]
+```
+
+
 
 # 5. Import and export data
 
