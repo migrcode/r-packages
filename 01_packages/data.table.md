@@ -293,7 +293,7 @@ DT2[, z := 11:15] # only DT2 is affected
 
 ## Summarize multiple columns efficiently
 
-```
+```r
 dt[, lapply(.SD, sum, na.rm=TRUE), by=category ]
 #  For specific columns (.SDcols also allows reordering of the columns)
 dt[, lapply(.SD, sum, na.rm=TRUE), by=category, .SDcols=c("a", "c", "z") ] 
