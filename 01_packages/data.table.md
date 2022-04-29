@@ -294,9 +294,9 @@ DT2[, z := 11:15] # only DT2 is affected
 ## Summarize multiple columns efficiently
 
 ```r
-dt[, lapply(.SD, sum, na.rm=TRUE), by=category ]
+dt[, lapply(.SD, sum, na.rm = TRUE), by = category]
 #  For specific columns (.SDcols also allows reordering of the columns)
-dt[, lapply(.SD, sum, na.rm=TRUE), by=category, .SDcols=c("a", "c", "z") ] 
+dt[, lapply(.SD, sum, na.rm = TRUE), by = category, .SDcols = c("a", "c", "z")] 
 ```
 
 (from https://stackoverflow.com/questions/16513827/summarizing-multiple-columns-with-data-table)
