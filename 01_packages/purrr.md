@@ -7,7 +7,7 @@
 
 ### Applications of keep, discard and compact
 
-```{r }
+```r
 mylist <- list(a = 1, b = 2, c = 3)
 keep(mylist, function(x) x == 1) # version 1
 keep(mylist, ~ .x == 1) # version 2
