@@ -36,6 +36,7 @@
 
 * [Mojave Dark Theme](https://github.com/patrickshox/Mojave-Dark-RStudio-Theme/blob/master/Demo%20Images%20and%20Gifs/Main.png)
 * [Visual Studio Theme](https://github.com/michaelasher/CustomRStudioTheme)
+* [Brilliant R-Studio Themes]([https://github.com/michaelasher/CustomRStudioTheme](https://www.garrickadenbuie.com/project/rsthemes/#installation))
 
 ## Useful Packages
 
@@ -43,6 +44,7 @@
 * [BBC Plots](https://bbc.github.io/rcookbook/)
 * [Ghibli](https://github.com/ewenme/ghibli) Studio Ghibli Color Palette
 * [Openxlsx2]([https://github.com/ewenme/ghibli)](https://github.com/JanMarvin/openxlsx2) This R package is a modern reinterpretation of the widely used popular openxlsx package. 
+* Blastula - automate e-Mails with blastula
 
 ## Font
 
