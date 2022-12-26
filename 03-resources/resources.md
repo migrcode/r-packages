@@ -42,6 +42,7 @@
 * [ShinyFeedback](https://github.com/merlinoa/shinyFeedback) R package for displaying user feedback alongside Shiny inputs
 * [BBC Plots](https://bbc.github.io/rcookbook/)
 * [Ghibli](https://github.com/ewenme/ghibli) Studio Ghibli Color Palette
+* [Openxlsx2]([https://github.com/ewenme/ghibli)](https://github.com/JanMarvin/openxlsx2) This R package is a modern reinterpretation of the widely used popular openxlsx package. 
 
 ## Font
 
