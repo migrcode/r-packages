@@ -46,6 +46,7 @@
 * [Ghibli](https://github.com/ewenme/ghibli) Studio Ghibli Color Palette
 * [Openxlsx2]([https://github.com/ewenme/ghibli)](https://github.com/JanMarvin/openxlsx2) This R package is a modern reinterpretation of the widely used popular openxlsx package. 
 * Blastula - automate e-Mails with blastula
+* [Profvis](https://csgillespie.github.io/efficientR/performance.html#top-5-tips-for-efficient-performance) After installing profvis, e.g. with `install.packages("profvis")`, it can be used to profile R code. 
 
 ## Font
 
