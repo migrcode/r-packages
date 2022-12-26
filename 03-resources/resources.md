@@ -17,7 +17,7 @@
 * [Use Code Folding](https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections)
 * [Use local() to locally evaluate expressions](https://adv-r.hadley.nz/evaluation.html)
 * [Progress bar in R](https://stackoverflow.com/questions/26919787/r-text-progress-bar-in-for-loop)
-* [Great Examples of R Data Science Projects](https://stackoverflow.com/questions/26919787/r-text-progress-bar-in-for-loop](https://stackoverflow.com/questions/1429907/workflow-for-statistical-analysis-and-report-writing/1434424#143442)
+* [Great Examples of R Data Science Projects](https://stackoverflow.com/questions/1429907/workflow-for-statistical-analysis-and-report-writing/1434424#143442)
 
 ## Datasets
 
