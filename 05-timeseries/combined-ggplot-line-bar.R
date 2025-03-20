@@ -36,17 +36,27 @@ data <- data.table(
 data <- data.table::dcast(data, date ~ series, value.var = "value")
 
 
-#------------------
-
-col_red <- '#D0603C'
-col_yellow <- '#E3A857'
-col_green <- '#7BA982'
-col_blue <- '#48769A'
-col_violet <- '#8A5E83'
-col_peach <- '#E17E5F'
-col_black <- '#333333'
-col_background <- '#F4EBDC'
-col_yellow_light <- '#FFCC86'
+# Define custom color palette
+color_palette <- c(
+  "blue" = "#1f77b4", 
+  "dark_pink" = "#9e0059",
+  "yellow" = "#dee000",
+  "red" = "#d82222",
+  "green" = "#5ea15d",
+  "purple" = "#943fa6",
+  "turquoise" = "#63c5b5",
+  "pink" = "#ff38ba",
+  "orange" = "#eb861e",
+  "light_pink" = "#ee266d",
+  "bg_light" = "#cccccc",
+  "dark_line" = "#666666",
+  "light_line" = "#d8d8d8",
+  "title" = "#353d42",
+  "text" = "#666666",
+  "bg_superlight" = "#f5f5f5",
+  "bg_default" = "#ffffff",
+  "black" = "#121516"
+)
 
 ggplot(data) +
   geom_bar(aes(x = date, y = E, fill = "E"), stat = "identity") +
@@ -63,16 +73,16 @@ ggplot(data) +
     labels = format_date
   ) +  
   theme_bw() +
-  theme(plot.background = element_rect(fill = col_background),
-        panel.background = element_rect(fill = col_background),
-        legend.background = element_rect(fill = col_background),
+  theme(plot.background = element_rect(fill = color_palette[["bg_default"]]),
+        panel.background = element_rect(fill = color_palette[["bg_default"]]),
+        legend.background = element_rect(fill = color_palette[["bg_default"]]),
         panel.border = element_blank(),
         panel.grid.major = element_blank(),
-        panel.grid.minor = element_line(color = col_background)) +
+        panel.grid.minor = element_line(color = color_palette[["bg_default"]])) +
   theme(axis.line = element_line(color = 'black')) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, family = "mono")) +
-  scale_color_manual("",values = c("A" = col_black, 
-                                   "C" = col_blue,
-                                   "D" = col_red)) +
-  scale_fill_manual("",values = c("E" = col_yellow_light, 
-                                   "G" = col_yellow))
+  scale_color_manual("",values = c("A" = color_palette[["black"]], 
+                                   "C" = color_palette[["blue"]],
+                                   "D" = color_palette[["light_pink"]])) +
+  scale_fill_manual("",values = c("E" = color_palette[["bg_light"]], 
+                                  "G" = color_palette[["purple"]]))
