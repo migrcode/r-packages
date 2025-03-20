@@ -5,7 +5,7 @@ library(data.table)
 # Set seed for reproducibility
 set.seed(123)
 
-# Generate a sequence of dates (monthly)
+# Generate a sequence of dates
 dates <- seq.Date(from = as.Date("2023-10-01"), to = as.Date("2023-12-31"), by = "day")
 n <- length(dates)
 
